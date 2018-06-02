@@ -66,8 +66,8 @@
 <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/global.js' %}"></script>
 <script type="text/javascript">
-    var suggest_url = "{% url "suggest" %}"
-    var search_url = "/search/"
+    var suggest_url = "{% url 'suggest' %}"
+    var search_url = "{% url 'search' %}"
 
 
 	$('.searchList').on('click', '.searchItem', function(){
@@ -98,7 +98,7 @@
                 async: true,
                 success: function(data) {
                     for (var i=0;i<data.length;i++){
-                        tmpHtml += '<li><a href="'+search_url+'?q='+data[i]+'">'+data[i]+'</a></li>'
+                        tmpHtml += '<li><a href="'+search_url+'?q='+data[i].slice(0,35)+'&s_type='+$(".searchItem.current").attr('data-type')+'">'+data[i]+'</a></li>'
                     }
                     $(".dataList").html("")
                     $(".dataList").append(tmpHtml);
@@ -152,7 +152,7 @@
             arrLen = searchArr.length
         }
         for (var i=0;i<arrLen;i++){
-            tmpHtml += '<a href="'+search_url+'?q='+searchArr[i]+'">'+searchArr[i]+'</a>'
+            tmpHtml += '<a href="'+search_url+'?q='+searchArr[i]+"&s_type="+$(".searchItem.current").attr('data-type')+'">'+searchArr[i]+'</a>'
         }
         $(".mysearch .all-search").html(tmpHtml);
     }

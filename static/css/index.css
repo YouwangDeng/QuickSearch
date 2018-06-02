@@ -9,7 +9,7 @@ html{*overflow:auto;}
 .nav{margin-bottom:10px;}
 .searchList{float:left;padding-left:5px;}
 .searchList .searchItem{float:left;margin-right:15px;font-size:14px;padding:0 0 2px 2px;cursor:pointer;height:18px;}
-.searchList .searchItem.current{color:#0080cc;border-bottom:2px solid #9cc813;font-weight:bold;}
+.searchList .searchItem.current{color:#41D1B4;border-bottom:2px solid #41D1B4;font-weight:bold;}
 
 /*input搜索区域*/
 .inputArea{position:relative;margin-bottom:65px;}
@@ -25,7 +25,7 @@ html{*overflow:auto;}
 /*搜索历史区域*/
 .historyArea{margin:0 auto;width:485px;}
 .historyArea .history {margin-bottom:5px;}
-.historyArea .history label{font-weight:bold;}
+.historyArea .history label{}
 .historyArea .history a{margin-right:12px;}
 
 /*版权信息*/
