@@ -5,7 +5,8 @@
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=emulateIE7" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>lcv-search 搜索引擎</title>
+<link rel="shortcut icon" href="{%static "img/favicon.ico"  %}" />
+<title>Quick Search</title>
 <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
 <link href="{% static 'css/index.css' %}" rel="stylesheet" type="text/css" />
 </head>
@@ -18,9 +19,8 @@
             </h1>
             <div class="nav ue-clear">
             	<ul class="searchList">
-                    <li class="searchItem current" data-type="article">文章</li>
-                    <li class="searchItem" data-type="question">问答</li>
-                    <li class="searchItem" data-type="job">职位</li>
+                    <li class="searchItem current" data-type="article">Articles</li>
+                    <li class="searchItem" data-type="job">Jobs</li>
                 </ul>
             </div>
             <div class="inputArea">
@@ -37,13 +37,13 @@
 
             <div class="historyArea">
             	<p class="history">
-                    <label>热门搜索：</label>
+                    <label>Popular Search：</label>
                     {% for search_word in topn_search %}
                         <a href='/search?q={{ search_word }}&s_type=article'>{{ search_word }}</a>
                     {% endfor %}
                 </p>
                 <p class="history mysearch">
-                	<label>我的搜索：</label>
+                	<label>My Search：</label>
                     <span class="all-search">
                         <a href="javascript:;"></a>
                         <a href="javascript:;"></a>
@@ -58,7 +58,7 @@
 
     <div class="foot">
     	<div class="wrap">
-            <div class="copyright">Copyright &copy;uimaker.com 版权所有  E-mail:admin@uimaker.com</div>
+            <div class="copyright">Copyright &copy;youwangdeng.com</div>
         </div>
     </div>
 </div>
